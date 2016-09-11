@@ -13,19 +13,24 @@
             android:title="About" />
     </group>
 
-    <item android:title="Calculations" >
+    <item android:title="Plane Geometry Calculations" >
 
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Plane Geometry"
-                app:actionLayout="@layout/spinner_plane_geo" />
+                android:title="Select to calculate"
+                android:id="@+id/nav_plane"
+                app:actionLayout="@layout/spinner_plane" />
+
+        </menu>
+
+    </item>
+
+    <item android:title="Solid Geometry Calculations" >
+        <menu>
             <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Solid Geometry"
-                app:actionLayout="@layout/spinner_solid_geo" />
+                android:title="Select to calculate"
+                android:id="@+id/nav_solid"
+                app:actionLayout="@layout/spinner_solid" />
         </menu>
     </item>
 

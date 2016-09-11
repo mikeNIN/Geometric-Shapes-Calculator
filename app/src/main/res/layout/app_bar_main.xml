@@ -20,8 +20,15 @@
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
+    
+    <ViewStub
+        android:id="@+id/stub_annulus"
+        android:inflatedId="@+id/panel_annulus"
+        android:layout="@layout/annulus_fragment"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" />
 
-    <include layout="@layout/content_main" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"

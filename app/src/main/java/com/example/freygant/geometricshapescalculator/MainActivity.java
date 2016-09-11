@@ -16,7 +16,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+            implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,17 +44,24 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        Spinner spinner_plane = (Spinner) findViewById(R.id.spinner_plane_geo);
+        Spinner spinner_plane = (Spinner) navigationView.getMenu().findItem(R.id.nav_plane).getActionView();
+        // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter_plane = ArrayAdapter.createFromResource(this,
                 R.array.plane_shapes, android.R.layout.simple_spinner_item);
+        // Specify the layout to use when the list of choices appears
         adapter_plane.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // Apply the adapter to the spinner
         spinner_plane.setAdapter(adapter_plane);
 
-        Spinner spinner_solid = (Spinner) findViewById(R.id.spinner_solid_geo);
+        Spinner spinner_solid = (Spinner) navigationView.getMenu().findItem(R.id.nav_solid).getActionView();
+        // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter_solid = ArrayAdapter.createFromResource(this,
                 R.array.solid_shapes, android.R.layout.simple_spinner_item);
+        // Specify the layout to use when the list of choices appears
         adapter_solid.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner_solid.setAdapter(adapter_plane);
+        // Apply the adapter to the spinner
+        spinner_solid.setAdapter(adapter_solid);
+
 
     }
 
@@ -100,9 +107,9 @@ public class MainActivity extends AppCompatActivity
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_plane) {
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_solid) {
 
         }
 
