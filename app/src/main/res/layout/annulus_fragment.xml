@@ -14,14 +14,13 @@
 
 
         <ImageView
-            android:background="@android:color/transparent"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:id="@+id/annulus_image"
             android:contentDescription="@string/an_image_of_annulus"
             android:cropToPadding="true"
             android:scaleType="centerCrop"
-            android:src="@drawable/annulus"
+            android:src="@drawable/annulus_1"
             android:layout_gravity="center"
             android:layout_weight="1" />
 
@@ -38,28 +37,41 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1">
 
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="numberDecimal"
-                    android:ems="10"
-                    android:id="@+id/editText"
-                    android:autoText="false"
-                    android:editable="true" />
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:ems="10"
+                        android:hint="@string/radius1"
+                        android:id="@+id/r1" />
+                </android.support.design.widget.TextInputLayout>
 
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="numberDecimal"
-                    android:ems="10"
-                    android:id="@+id/editText2" />
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:ems="10"
+                        android:hint="@string/radius2"
+                        android:id="@+id/r2" />
+                </android.support.design.widget.TextInputLayout>
 
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="numberDecimal"
-                    android:ems="10"
-                    android:id="@+id/editText5" />
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:ems="10"
+                        android:hint="C0"
+                        android:id="@+id/C0" />
+                </android.support.design.widget.TextInputLayout>
             </LinearLayout>
 
             <LinearLayout
@@ -67,15 +79,20 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:ems="10"
+                        android:hint="r1"
+                        android:id="@+id/editText3" />
+                </android.support.design.widget.TextInputLayout>
 
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="numberDecimal"
-                    android:ems="10"
-                    android:id="@+id/editText3" />
 
-                <EditText
+            <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:inputType="numberDecimal"

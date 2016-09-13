@@ -9,6 +9,9 @@
     <string name="spinner_plane">Test</string>
     <string name="an_image_of_annulus">an image of annulus</string>
 
+    <string name="radius1">r<sub><small>1</small></sub></string>
+    <string name="radius2">r<sub>2</sub></string>
+
     <string-array name="plane_shapes">
         <item>Annulus</item>
         <item>Circle</item>
